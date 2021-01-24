@@ -23,6 +23,7 @@
 
 + 주차별로 정해진 주제를 각 2문제씩 내기 -> 총 10문제를 각자 풀어오고, 본인의 문제는 완벽하기 숙지하기!  
 + 언어는 Java를 default로 합니다.
+:warning: 모두 완벽 SOL을 하지 못해도 논리적 구조를 최대한 파악해 옵니다.
 
 ## :snowflake: 참고사이트
 [프로그래머스](https://programmers.co.kr/learn/challenges?tab=practice_kit)
@@ -51,8 +52,6 @@
 [HoYeong](https://github.com/hoyeong-s)
 - Blog : 
 - E-mail : 
-
-:warning: 모두 완벽 SOL을 하지 못해도 논리적 구조를 최대한 파악해 옵니다.
 
 
 ## :snowflake: 진행순서
