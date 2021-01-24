@@ -12,10 +12,8 @@
 > 4. 개인이 낸 문제는 코드리뷰 때 설명할 수 있을 정도로 숙지한다.
 > 5. 수학, 기하학 같은 문제는 내지 않는다.
 
----:
-
-> 흐름도
-> 1주차 스택/큐, 덱, 힙, 우선순위큐
+## :raised_hands: 흐름도 예시
+> 1주차 : 스택/큐, 덱, 힙, 우선순위큐
 > 2주차 
 > 3주차 
 > 4주차 
@@ -24,13 +22,13 @@
 ## :raised_hands: 알고리즘 풀이 진행 방식
 
 :snowflake: 주차별로 정해진 주제를 각 2문제씩 내기 -> 총 10문제를 각자 풀어오고, 본인의 문제는 완벽하기 숙지하기!
+:snowflake: 언어는 Java를 default로 합니다.
 
 ## :snowflake: 참고사이트
 [프로그래머스](https://programmers.co.kr/learn/challenges?tab=practice_kit)
 [백준 알고리즘](https://www.acmicpc.net/) 
 [solved.ac](https://solved.ac/)
 
-:snowflake: 언어는 Java를 default로 합니다.
 
 ## 팀원소개
 
