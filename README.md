@@ -1,8 +1,10 @@
-# :snowman: 싸피 서울 5기 자율 알고리즘 스터디 -- 9반 1팀 (Begin 2021/01/25)
+# :snowman: 싸피 서울 5기 자율 알고리즘 스터디 
 
 <p align="center">
   <img src="./img/ssafy.png">
 </p>
+
+<u>- 9반 1팀 (Begin 2021/01/25) -</u>
 
 ## :sunglasses: 일주일에 10문제 풀기 도전!
 
