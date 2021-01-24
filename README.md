@@ -21,8 +21,8 @@
 
 ## :raised_hands: 알고리즘 풀이 진행 방식
 
-:snowflake: 주차별로 정해진 주제를 각 2문제씩 내기 -> 총 10문제를 각자 풀어오고, 본인의 문제는 완벽하기 숙지하기!  
-:snowflake: 언어는 Java를 default로 합니다.
++ 주차별로 정해진 주제를 각 2문제씩 내기 -> 총 10문제를 각자 풀어오고, 본인의 문제는 완벽하기 숙지하기!  
++ 언어는 Java를 default로 합니다.
 
 ## :snowflake: 참고사이트
 [프로그래머스](https://programmers.co.kr/learn/challenges?tab=practice_kit)
@@ -30,7 +30,7 @@
 [solved.ac](https://solved.ac/)
 
 
-## 팀원소개
+## :snowflake: 팀원소개
 
 [Sujin](https://github.com/SujinJeong)
 - Blog : https://blog.naver.com/lovesujin051
@@ -55,7 +55,7 @@
 :warning: 모두 완벽 SOL을 하지 못해도 논리적 구조를 최대한 파악해 옵니다.
 
 
-## 참고사항
+## :snowflake: 진행순서
 1. 입력보고 시간복잡도 확인
 > - 1e8 = 1초
 > - 입력 값 범위 ~ 100 (완탐가능)
@@ -65,7 +65,7 @@
 3. 코드 작성
 4. 디버깅
 
-## 런타임에러 발생하는 경우
+## :snowflake: 런타임에러 발생하는 경우
 1. 배열에 할당된 크기를 넘어서 접근했을 때
 2. 전역 배열의 크기가 메모리 제한을 초과할 때
 3. 지역 배열의 크기가 스택 크기 제한을 넘어갈 때
@@ -76,6 +76,6 @@
 8. 프로그램(main 함수)이 0이 아닌 수를 반환했을 때
 9.  반환형이 void가 아닌 함수에서 아무런 값을 반환하지 않았을 때
 
-## '틀렸습니다' 발생하는 경우
+## :snowflake: '틀렸습니다' 발생하는 경우
 1. 특정 테스트 케이스 확인하기
 2. 예외처리
