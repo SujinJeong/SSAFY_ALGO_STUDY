@@ -12,11 +12,7 @@
 > 4. 개인이 낸 문제는 코드리뷰 때 설명할 수 있을 정도로 숙지한다.
 > 5. 수학, 기하학 같은 문제는 내지 않는다.
 
-## :raised_hands: 알고리즘 풀이 진행 방식
-
-:snowflake: 주차별로 정해진 주제를 각 2문제씩 내기 -> 총 10문제를 각자 풀어오고, 본인의 문제는 완벽하기 숙지하기!
-
-:snowflake: [프로그래머스](https://programmers.co.kr/learn/challenges?tab=practice_kit) 또는 [백준 알고리즘](https://www.acmicpc.net/) 
+---:
 
 > 흐름도
 > 1주차 스택/큐, 덱, 힙, 우선순위큐
@@ -25,19 +21,28 @@
 > 4주차 
 > ...
 
+## :raised_hands: 알고리즘 풀이 진행 방식
+
+:snowflake: 주차별로 정해진 주제를 각 2문제씩 내기 -> 총 10문제를 각자 풀어오고, 본인의 문제는 완벽하기 숙지하기!
+
+## :snowflake: 참고사이트
+[프로그래머스](https://programmers.co.kr/learn/challenges?tab=practice_kit)
+[백준 알고리즘](https://www.acmicpc.net/) 
+[solved.ac](https://solved.ac/)
+
 :snowflake: 언어는 Java를 default로 합니다.
 
-### 팀원소개
+## 팀원소개
 
 [Sujin](https://github.com/SujinJeong)
 - Blog : https://blog.naver.com/lovesujin051
 - E-mail : lovesujin05173@gmail.com
 
-[Woongseok] (https://github.com/woongseob12)
+[Woongseob](https://github.com/woongseob12)
 - Blog : 
 - E-mail : 
 
-[HoGyun] (https://github.com/KangHoGyun)
+[HoGyun](https://github.com/KangHoGyun)
 - Blog : 
 - E-mail : 
 
@@ -45,18 +50,22 @@
 - Blog : 
 - E-mail : 
 
+[HoYeong](https://github.com/hoyeong-s)
+- Blog : 
+- E-mail : 
+
 :warning: 모두 완벽 SOL을 하지 못해도 논리적 구조를 최대한 파악해 옵니다.
 
 
-### 참고사항
-# 1. 입력보고 시간복잡도 확인
-- 1e8 = 1초
-- 입력 값 범위 ~ 100 (완탐가능)
-- 입력 값 범위 ~ 400 (O(N^3))가능, 플루이드 등)
-- 입력 값 범위 ~ 1,000,000 (O(N^2)도 불가능)
-# 2. 40분 정도 로직 생각, 반례 있는지 확인
-# 3. 코드 작성
-# 4. 디버깅
+## 참고사항
+1. 입력보고 시간복잡도 확인
+> - 1e8 = 1초
+> - 입력 값 범위 ~ 100 (완탐가능)
+> - 입력 값 범위 ~ 400 (O(N^3))가능, 플루이드 등)
+> - 입력 값 범위 ~ 1,000,000 (O(N^2)도 불가능)
+2. 40분 정도 로직 생각, 반례 있는지 확인
+3. 코드 작성
+4. 디버깅
 
 ## 런타임에러 발생하는 경우
 1. 배열에 할당된 크기를 넘어서 접근했을 때
