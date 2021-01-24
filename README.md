@@ -2,10 +2,8 @@
 
 <p align="center">
   <img src="./img/ssafy.png">
+  - 9반 1팀 (Begin 2021/01/25) -
 </p>
-
-<u>- 9반 1팀 (Begin 2021/01/25) -</u>
-
 ## :sunglasses: 일주일에 10문제 풀기 도전!
 
 > 1. 일주일에 인당 2문제 씩 해당 주차의 주제 내에서 문제 낸다.
