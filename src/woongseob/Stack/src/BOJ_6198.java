@@ -1,11 +1,11 @@
-package woongseob.Stack.src;
+package study_0125;
 
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
 import java.util.Stack;
 
-public class Sol_6198 {
+public class BOJ_6198 {
 	static int N;
 	static int[] height;
 	static long ans = 0;

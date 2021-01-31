@@ -1,4 +1,4 @@
-package woongseob.Stack.src;
+package study_0125;
 
 import java.io.BufferedReader;
 import java.io.IOException;
@@ -6,7 +6,7 @@ import java.io.InputStreamReader;
 import java.util.Stack;
 import java.util.StringTokenizer;
 
-public class Sol_2493 {
+public class BOJ_2493 {
 	static class lazer {
 		public lazer(int height, int pos) {
 			super();
