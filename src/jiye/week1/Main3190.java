@@ -1,6 +1,9 @@
 package jiye.week1;
 import java.util.*;
 class Main3190 {
+//이걸로 해서 하면 편하다
+    // static int[] dx = {0,1,0,-1};
+    // static int[] dy = {1,0,-1,0};
     static boolean ifSnake(Queue<Integer> q, int a)
     {
         Integer[] arr = q.toArray(new Integer[q.size()]);
@@ -72,7 +75,7 @@ class Main3190 {
             }
             i++;
             
-            boolean b = true;
+            boolean b = true;//맵밖을 나가는지
             switch(dir)
             {//방향에 따른 다음 뱀머리 위치
                 case 1:
