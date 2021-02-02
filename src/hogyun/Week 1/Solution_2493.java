@@ -1,4 +1,4 @@
-package hogyun.Stack;
+package stack;
 
 import java.io.BufferedReader;
 import java.io.IOException;

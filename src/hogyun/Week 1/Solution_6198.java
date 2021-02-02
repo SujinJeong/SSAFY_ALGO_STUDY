@@ -1,4 +1,4 @@
-package hogyun.Stack;
+package stack;
 
 import java.util.Scanner;
 import java.util.Stack;
@@ -30,5 +30,6 @@ public class Solution_6198 {
 		getSum();
 		System.out.println(sum);
 		sc.close();
+		
 	}
 }

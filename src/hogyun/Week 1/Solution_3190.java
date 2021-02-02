@@ -1,4 +1,4 @@
-package hogyun.Queue;
+package queue;
 
 import java.io.BufferedReader;
 import java.io.IOException;
@@ -65,7 +65,7 @@ public class Solution_3190 {
 				if (time == q.peek().seconds) { //비교해줄 때 q가 비어있을 수도 있어서
 					if (q.peek().dir == 'D') {
 						if (d == 3)
-							d = 0;
+							d = 0; // d %= 4; 이렇게 하면 코드가 더 간결해진다.
 						else
 							d++;
 					} else {
