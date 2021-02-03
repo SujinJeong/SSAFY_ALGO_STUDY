@@ -2,7 +2,7 @@ package jiye.week1;
 import java.util.*;
 class Main1966 {
     static boolean func(Queue<Integer> q,int a)
-    {
+    {//뒤에 더 큰게 있나 보는 함수
         for(Integer i : q)
         {
             if(a<i)
@@ -23,7 +23,8 @@ class Main1966 {
 
             Queue<Integer> qIndex = new LinkedList<Integer>();//인덱스
             Queue<Integer> q = new LinkedList<Integer>();//중요도
-            ArrayList<Integer> answer = new ArrayList<Integer>();
+            
+            ArrayList<Integer> answer = new ArrayList<Integer>();//뺀 인덱스 담기
 
             for(int i=0;i<n;i++)
             {
@@ -31,6 +32,10 @@ class Main1966 {
                 qIndex.offer(i);
                 q.offer(a);
             }
+
+//    q    2 4 1 3  -> 4132 -> 132 -> 321 -> 21 -> 1 
+// qindex  0 1 2 3  -> 1230 -> 230 -> 302 -> 02 -> 2
+// answer                      1             3     0 
 
             while(q.size()>0)
             {

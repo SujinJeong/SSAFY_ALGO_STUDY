@@ -1,4 +1,4 @@
-package hogyun.PriorityQueue;
+package priorityQueue;
 
 import java.util.*;
 import java.io.*;

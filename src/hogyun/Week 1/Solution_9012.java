@@ -1,4 +1,4 @@
-package hogyun.Stack;
+package stack;
 
 import java.util.Scanner;
 import java.util.Stack;

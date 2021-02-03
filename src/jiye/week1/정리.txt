@@ -1,0 +1,56 @@
+STACK
+Last in Last out
+
+Stack<Integer> st = new Stack<Integer>();
+st.push(---);
+st.pop();
+st.peek();
+st.contains(---);//원소 있으면 true반환
+
+
+
+QUEUE
+First in First out
+
+Queue<Integer> q = new LinkedList<Integer>();
+q.offer(---);
+q.add(---);
+q.poll();
+q.peek();
+
+
+
+DEQUE
+양쪽에서 넣고 빼고
+
+Deque<Integer> dq = new ArrayDeque<Integer>();
+.add();//기본은 마지막에 추가하는 것
+.addFirst(---);
+.pollFirst();
+.peekFirst();//보기만
+
+.addLast(---);
+.pollLast();
+.peekLast();
+
+
+
+PriorityQueue
+우선순위대로 저장된다
+
+PriorityQueue<Integer> pq = new PriorityQueue<Integer>();
+pq.offer(---);
+pq.poll();
+pq.peek();
+
+역순이라면
+PriorityQueue<Integer> pq = new PriorityQueue<Integer>(Collections.reverseOrder());
+
+PriorityQueue<Integer> pq = new PriorityQueue<>(new Comparator<Integer>() {
+	@Override
+	public int compare(Integer o1, Integer o2) {
+		return o2-o1;
+	}
+});
+
+

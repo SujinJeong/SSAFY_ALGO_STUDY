@@ -1,4 +1,4 @@
-package hogyun.Deque;
+package deque;
 
 import java.util.*;
 import java.io.*;

@@ -8,6 +8,12 @@ class Main9012 {
         int T = sc.nextInt();
         StringBuilder sb = new StringBuilder();
 
+
+        //(는 넣고 )등장하면 뺀다
+        //(가 없는데 )가 등장하는 경우는 틀린거니까 바로 땡
+        //다 돌고나서 스택에 들어있는게 없으면 ()잘맞는것
+        //음 별거 없음..
+
         for(int t=0;t<T;t++)
         {
             Stack<Integer> stack = new Stack<Integer>();
@@ -40,6 +46,7 @@ class Main9012 {
                     sb.append("YES\n");
         }
         System.out.println(sb);
+
+        sc.close();
     }
-    
 }

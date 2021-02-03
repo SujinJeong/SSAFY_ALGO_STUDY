@@ -1,4 +1,4 @@
-package hogyun.Heap;
+package heap;
 
 import java.io.*;
 import java.util.*;
