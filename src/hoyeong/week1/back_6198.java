@@ -1,4 +1,4 @@
-package hoyeong.Stack;
+package hoyeong.week1;
 /*
 6
 10

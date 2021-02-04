@@ -1,4 +1,4 @@
-package hoyeong.Stack;
+package hoyeong.week1;
 
 import java.util.EmptyStackException;
 import java.util.Scanner;
@@ -24,13 +24,13 @@ public class back_10799 {
 		int LC=0;
 		for(int i=0; i<arr.length;i++) {
 			if(arr[i].equals("(")) stack.push(new In("(",0)); // "(" 일때는 무조건 push
-			else if((arr[i].equals(")"))){												// ")" 일 때
+			else if((arr[i].equals(")"))){					 // ")" 일 때
 				try {
 					if(stack.peek().gual.equals("(") && stack.peek().cnt==0) { // 레이저일 때
 						stack.pop();
 						++stack.peek().cnt;
 					}
-					else {
+					else { // 막대가 끝날 때
 						sum += stack.peek().cnt+1;
 						LC = stack.peek().cnt;
 						stack.pop();
