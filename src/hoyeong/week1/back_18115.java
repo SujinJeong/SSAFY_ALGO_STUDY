@@ -1,4 +1,4 @@
-package hoyeong.Deque;
+package hoyeong.week1;
 
 import java.io.BufferedReader;
 import java.io.IOException;

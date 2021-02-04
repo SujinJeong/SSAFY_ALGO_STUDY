@@ -1,4 +1,4 @@
-package hoyeong.Deque;
+package hoyeong.week1;
 
 import java.io.BufferedReader;
 import java.io.IOException;
@@ -24,7 +24,7 @@ class Abs implements Comparable<Abs>{
 		return Math.abs(this.x)-Math.abs(o.x);
 	}
 }
-public class back_11286 {
+public class back_11286{
 	
 	public static void main(String[] args) throws NumberFormatException, IOException {
 		// TODO Auto-generated method stub
@@ -47,3 +47,24 @@ public class back_11286 {
 		}
 	}
 }
+/*
+18
+1
+-1
+0
+0
+0
+1
+1
+-1
+-1
+2
+-2
+0
+0
+0
+0
+0
+0
+0
+*/

@@ -1,4 +1,4 @@
-package Queue;
+package hoyeong.week1;
 
 import java.io.BufferedReader;
 import java.io.IOException;
@@ -38,5 +38,4 @@ public class back_11866 {
 		}
 		System.out.println(">");
 	}
-
 }
