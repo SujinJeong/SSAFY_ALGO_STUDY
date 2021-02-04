@@ -1,4 +1,4 @@
-package sujin.Jan;
+package sujin.Week1;
 
 import java.io.IOException;
 import java.util.LinkedList;

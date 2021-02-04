@@ -1,4 +1,4 @@
-package sujin.Jan;
+package sujin.Week1;
 
 import java.io.BufferedReader;
 import java.io.BufferedWriter;
@@ -40,7 +40,7 @@ public class Q2493 {
 					bw.write((st.peek().index+1) + " ");
 					break;
 				}
-				// 스택 최상단 값 > 입력값일때까지 비교해주기 위해 조건 안맞으면 pop
+				// 스택 최상단 값 > 입력값 일때까지 비교해주기 위해 조건 안맞으면 pop
 				st.pop();
 			}
 			
