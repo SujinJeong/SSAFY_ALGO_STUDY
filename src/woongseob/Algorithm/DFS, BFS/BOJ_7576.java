@@ -65,8 +65,9 @@ public class BOJ_7576 {
 			for (int i = 0; i < 4; i++) {
 				int ny = y + dy[i];
 				int nx = x + dx[i];
-				if (ny < 0 || ny >= N || nx < 0 || nx >= M)
+				if (ny < 0 || ny >= N || nx < 0 || nx >= M) {
 					continue;
+				}
 				if(!visit[ny][nx] && box[ny][nx] == 0) {
 					box[ny][nx] = 1;
 					q.offer(new Tomato(ny, nx, tmp.day + 1));

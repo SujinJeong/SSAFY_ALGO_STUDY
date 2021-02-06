@@ -45,7 +45,7 @@ public class BOJ_12851 {
 			}
 			
 			visit[curr] = true;
-			
+	
 			if(curr - 1 >= 0 && !visit[curr - 1]) {
 				q.offer(new Info(curr - 1, time + 1));
 			}
