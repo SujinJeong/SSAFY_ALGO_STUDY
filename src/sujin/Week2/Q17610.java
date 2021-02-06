@@ -23,7 +23,7 @@ public class Q17610 {
 			if (weight > 0) visited[weight] = true;
 			return;
 		}
-			// 0~num-1번째 추를 순차적으로 3가지 중 한개 선택
+			// 0~num-1번째 추를 순차적으로 3가지 경우의 수 중 한개 선택
 			scale(idx+1, weight+arr[idx]);
 			scale(idx+1, weight-arr[idx]);
 			scale(idx+1, weight);
