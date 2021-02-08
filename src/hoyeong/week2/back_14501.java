@@ -7,6 +7,17 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.StringTokenizer;
 
+class input2 {
+	int a;
+	int b;
+	public input2(int a, int b) {
+		super();
+		this.a = a;
+		this.b = b;
+	}
+}
+
+
 public class back_14501 {
 	static List<input2> list;
 	static int N;
@@ -29,14 +40,22 @@ public class back_14501 {
 		
 	}
 	
-	private static void compare(int start, int sum) {
+	private static void compare(int idx, int sum) {
 		max = Math.max(max, sum);
+		if(idx==N) return;
 		
-		for(int i=start; i<N; i++) {
-			if(start==0) sum=0;
-			if(i+list.get(i).a<=N) {
+		if(idx+list.get(idx).a<=N) { // 다음칸으로 갈 수 있으면
+			compare(idx+list.get(idx).a,sum+list.get(idx).b);
+		}
+		compare(idx+1,sum);
+		
+		/*private static void compare(int idx, int sum) {
+			max = Math.max(max, sum);
+			for(int i=start; i<N; i++) {
+				if(start==0) sum=0;
+				if(i+list.get(i).a<N) {
 				compare(i+list.get(i).a,sum+list.get(i).b);
 			}
-		}
+		}*/
 	}
 }
