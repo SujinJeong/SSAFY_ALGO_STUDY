@@ -1,7 +1,7 @@
 import java.util.*;
 import java.io.*;
 
-class Main15686 {
+class Main15686 {//치킨거리
     static int M;
     static int MIN=1000000000;//min 잘잡자
     static ArrayList<int[]> arrh;
@@ -73,15 +73,10 @@ class Main15686 {
             }
         }
 
-        // for(int i=0;i<arrc.size();i++)//총 치킨집 수
-        // {
-        //     int[] combi= new int[M];//M개조합
-        //     combi[0]=i;
-        //     func(i,1,arrc.size(),combi);
-        // }
-     
+        //M개 치킨집 조합을 뽑고
+        //집집마다 치킨거리 구해서
 
-        func(0,0,arrc.size(),new int[M]);
+        func(0,0,arrc.size(),new int[M]);//모든 치킨집 중에 M개 뽑는 치킨집 조합
             System.out.println(MIN);
     }
 }
