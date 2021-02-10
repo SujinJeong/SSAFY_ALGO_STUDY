@@ -18,6 +18,7 @@ public class Q2671 {
 	static void dfs(int x, int y) {
 		// 외부공기니까 -1로 바꿔주기
 		map[x][y] = -1;
+		
 		for (int i = 0; i < 4; i++) {
 			int nx = x + dx[i];
 			int ny = y + dy[i];
