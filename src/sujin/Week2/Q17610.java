@@ -5,12 +5,12 @@ import java.io.IOException;
 import java.io.InputStreamReader;
 import java.util.StringTokenizer;
 /*
-1. ±×¸© ¹İ´ëÂÊ¿¡ Ãß¸¦ ¿Ã¸®´Â °æ¿ì °è¼Ó ++
-=> scale(i + 1, ÇöÀç ¹«°Ô + i¹øÂ° Ãß ¹«°Ô); 
-2. ±×¸©ÂÊ¿¡ Ãß¸¦ ¿Ã·Á ³õ´Â °æ¿ì ÇöÀç¹«°Ô¿¡¼­ --
-=> scale(i + 1, abs(ÇöÀç ¹«°Ô - i¹øÂ° Ãß ¹«°Ô); 
-3. ÇØ´ç Ãß¸¦ ¾Æ¹«µ¥µµ ¿Ã·Á ³õÁö ¾Ê´Â °æ¿ì ¹«°Ô À¯Áö
-=> scale(i + 1, ÇöÀç ¹«°Ô);
+1. ê·¸ë¦‡ ë°˜ëŒ€ìª½ì— ì¶”ë¥¼ ì˜¬ë¦¬ëŠ” ê²½ìš° ê³„ì† ++
+=> scale(i + 1, í˜„ì¬ ë¬´ê²Œ + ië²ˆì§¸ ì¶” ë¬´ê²Œ); 
+2. ê·¸ë¦‡ìª½ì— ì¶”ë¥¼ ì˜¬ë ¤ ë†“ëŠ” ê²½ìš° í˜„ì¬ë¬´ê²Œì—ì„œ --
+=> scale(i + 1, abs(í˜„ì¬ ë¬´ê²Œ - ië²ˆì§¸ ì¶” ë¬´ê²Œ); 
+3. í•´ë‹¹ ì¶”ë¥¼ ì•„ë¬´ë°ë„ ì˜¬ë ¤ ë†“ì§€ ì•ŠëŠ” ê²½ìš° ë¬´ê²Œ ìœ ì§€
+=> scale(i + 1, í˜„ì¬ ë¬´ê²Œ);
  */
 public class Q17610 {
 	public static int num;
@@ -23,7 +23,6 @@ public class Q17610 {
 			if (weight > 0) visited[weight] = true;
 			return;
 		}
-			// 0~num-1¹øÂ° Ãß¸¦ ¼øÂ÷ÀûÀ¸·Î 3°¡Áö °æ¿ìÀÇ ¼ö Áß ÇÑ°³ ¼±ÅÃ
 			scale(idx+1, weight+arr[idx]);
 			scale(idx+1, weight-arr[idx]);
 			scale(idx+1, weight);
@@ -40,7 +39,6 @@ public class Q17610 {
 			sum += arr[i];
 		}
 		
-		// 1~sum±îÁö °ª Áß¿¡ °ªÀÌ ³ª¿Ô´ÂÁö È®ÀÎ
 		visited = new boolean[sum+1];
 		scale(0, 0);
 		

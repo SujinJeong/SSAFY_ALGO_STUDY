@@ -1,7 +1,7 @@
 import java.util.*;
 import java.io.*;
 
-class Main14888 {
+class Main14888 {//연산자 끼워넣기
     static int N;
     static int[] arr;
     static int min=1000000000;
@@ -47,12 +47,13 @@ public static void func(int[] parr)
         min=c;
         System.out.println(max+" "+min);
 }
+
 public static void per(int i, int[] parr, int[] oper, boolean[] visited)
 {
     if(i==N-1)
     {
         func(parr);
-        // System.out.println(Arrays.toString(parr));
+        System.out.println(Arrays.toString(parr));
         return;
     }
     for(int j=0;j<N-1;j++)
@@ -88,9 +89,14 @@ public static void per(int i, int[] parr, int[] oper, boolean[] visited)
                 k++;
             }
         }
-        
 
-        per(0,new int[N-1],oper,new boolean[N-1]);
+        //연산자 순열 구해서 순열마다 계산한다
+        //3 + 4 * 5
+        //3 * 4 + 5
+        //재귀로 훨씬 간단하게 할수있다
+        //전역ㄱ변수로.. 배열을 인자로 두는건 좋지않다
+
+        per(0,new int[N-1],oper,new boolean[N-1]);//연산자 순열
         System.out.println(max+"\n"+min);
     }
 }
