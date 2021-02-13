@@ -1,40 +1,32 @@
 import java.io.*;
 import java.util.*;
- class Main3584 {
+ class Main3584 {//가장 가까운 공통 조상
     static int answer;
     static ArrayList<ArrayList<Integer>> al;
-    static int[] arr1;
-    static int[] arr2;
+    static boolean[] visited;
 
-    public static void find(int target, int index)
+    public static void find(int target)
     {
         if(al.get(target).size()==0)
             return;
 
         int a = al.get(target).get(0);//target의 부모
-        arr1[index] = a;
-        find(a, index+1);//target의 부모의 부모를 찾는다
+        visited[a] = true;
+        find(a);//target의 부모의 부모를 찾는다
     }
 
-    public static void check(int target, int index)
+    public static void check(int target)
     {
         if(al.get(target).size()==0)
             return;
 
         int a = al.get(target).get(0);
-        arr2[index] = a;
-
-        for(int i=0;i<arr1.length;i++)
+        if(visited[a]==true)
         {
-            if(arr1[i]==0)
-                break;//뒤에 더 없음
-            if(a ==arr1[i])
-            {
-                answer = a;//공통조상을 찾았다
-                return;
-            }
+            answer=a;
+            return;
         }
-        check(a, index+1);
+        check(a);
     }
 
     public static void main(String[] args) throws Exception{
@@ -45,7 +37,6 @@ import java.util.*;
         {
             int N = Integer.parseInt(br.readLine());
             StringTokenizer st;
-            // int[][] arr = new int [N-1][2];
             al = new ArrayList<ArrayList<Integer>>();
             for(int i=0;i<=N;i++)
                 al.add(new ArrayList<Integer>());
@@ -62,17 +53,12 @@ import java.util.*;
             int target1 = Integer.parseInt(st.nextToken());
             int target2 = Integer.parseInt(st.nextToken());
 
-            //순서대로 조상찾기
-            arr1 = new int[N];
-            arr2 = new int[N];
-            arr1[0] = target1;
-            find(target1,1);
+            visited = new boolean[N+1];
+            visited[target1]=true;
+            visited[target2]=true;
+            find(target1);//조상 쭉 찾고
 
-            arr2[0] = target2;
-            check(target2,1);
-
-            System.out.println(Arrays.toString(arr1));
-            System.out.println(Arrays.toString(arr2));
+            check(target2);//가장 먼저 겹치는게 공통조상
 
             System.out.println(answer);
         }
