@@ -1,13 +1,13 @@
 package study_0208;
 
 import java.io.*;
-import java.util.ArrayList;
-import java.util.StringTokenizer;
+import java.util.*;
 
 public class BOJ_3584 {
 	static int N;
 	static int[] parent, depth;
 	static ArrayList<Integer>[] list;
+	@SuppressWarnings("unchecked")
 	public static void main(String[] args) throws NumberFormatException, IOException {
 		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
 		StringBuilder sb = new StringBuilder();
