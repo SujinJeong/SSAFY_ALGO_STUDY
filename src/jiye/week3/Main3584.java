@@ -7,11 +7,12 @@ import java.util.*;
 
     public static void find(int target)
     {
-        if(al.get(target).size()==0)
+        if(al.get(target).size()==0)//더이상 부모가 없다 - 루트
             return;
 
         int a = al.get(target).get(0);//target의 부모
-        visited[a] = true;
+        visited[a] = true;//방문했던 노드들
+
         find(a);//target의 부모의 부모를 찾는다
     }
 
@@ -20,9 +21,10 @@ import java.util.*;
         if(al.get(target).size()==0)
             return;
 
-        int a = al.get(target).get(0);
+        int a = al.get(target).get(0);//target의 부모
+
         if(visited[a]==true)
-        {
+        {//가장 먼저 겹치는 노드
             answer=a;
             return;
         }
@@ -53,12 +55,24 @@ import java.util.*;
             int target1 = Integer.parseInt(st.nextToken());
             int target2 = Integer.parseInt(st.nextToken());
 
+//al 자식  부모
+//    1     3
+//    2        --루트
+//    3     2
+//    4     3
+//    5     1                              1 2 3 4 5
+// target1 : 3   target2 : 5  |   visited  f f t f t        
+// 3->2->x                    |   visited  f t t f t 
+// 5->3               visited[3] true라서 탈출 
+
+
             visited = new boolean[N+1];
             visited[target1]=true;
-            visited[target2]=true;
-            find(target1);//조상 쭉 찾고
+            visited[target2]=true;//자기자신부터 true 
 
-            check(target2);//가장 먼저 겹치는게 공통조상
+            find(target1);//target1의 조상을 끝까지 찾고
+
+            check(target2);//가장 먼저 겹치는게 가장 가까운 공통조상
 
             System.out.println(answer);
         }

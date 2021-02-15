@@ -1,7 +1,7 @@
 import java.util.*;
 import java.io.*;
 
-class Main1303{
+class Main1303{//전쟁 - 전투
     static int N;
     static int M;
     static int[][] map;
@@ -11,7 +11,7 @@ class Main1303{
     static int count;
 
     public static void func(int x, int y, int a)
-    {
+    {//변수a로 W인것만 보고 B인것만 보고
         visited[x][y]=true;
         count++;
 
@@ -46,11 +46,11 @@ class Main1303{
             for(int j=0;j<M;j++)
             {
                 if(str.charAt(j)=='W')
-                map[i][j] = 1;
+                map[i][j] = 1;//W면 1
                 else
-                map[i][j] = 2;
+                map[i][j] = 2;//B면 2
             }
-        }
+        }//입력
 
         for(int i=0;i<N;i++)
         {
@@ -59,11 +59,11 @@ class Main1303{
                 if(visited[i][j]==false)
                 {
                     func(i,j,map[i][j]);
-                    if(map[i][j]==1)
+                    if(map[i][j]==1)//W센거면 W위력
                         W+=count*count;
                     else
                         B+=count*count;
-                    count=0;
+                    count=0;//초기화
                 }
             }
         }  
