@@ -5,12 +5,12 @@ class Kart{
     int t;
     public Kart(int x, int t)
     {
-        this.x = x;
-        this.t = t;
+        this.x = x;//위치
+        this.t = t;//시간
     }
 }
 
-class Main17391{
+class Main17391{//무한부스터
     static int N;
     static int M;
     static int[][] map;
@@ -23,15 +23,16 @@ class Main17391{
             return;
 
         visited[x][y]=true;
+
         for(int i=map[x][y];i>=1;i--)
-        {
+        {//최대 부스터만큼 최소 1칸
             if(x+i<N && visited[x+i][y]==false)
-            {//아래쪽
+            {//아래쪽으로 i칸
                 q.add(new Kart((x+i)*M+y,t+1));
             }
 
             if(y+i<M&& visited[x][y+i]==false)
-            {//오른쪽
+            {//오른쪽으로 i칸
                 q.add(new Kart(x*M+y+i,t+1));
             }
         }
@@ -51,11 +52,11 @@ class Main17391{
             {
                 map[i][j] = Integer.parseInt(st.nextToken());
             }
-        }
+        }//입력
 
         q = new LinkedList<>();
         visited = new boolean[N][M];
-        q.add(new Kart(0,0));
+        q.add(new Kart(0,0));//시작위치
         int min = 0;
 
         while(q.size()>0)
@@ -66,8 +67,8 @@ class Main17391{
             int t = k.t;
 
             if(x==N-1 && y==M-1)
-            {
-                min = t;
+            {//도착하면 게임 종료
+                min = t;//그때의 시간
                 break;
             }
 
