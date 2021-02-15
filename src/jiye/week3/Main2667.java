@@ -1,10 +1,10 @@
 import java.util.*;
 import java.io.*;
-class Main2667 {
+class Main2667 {//단지 번호 붙이기
     static int N;
     static int[][] map;
     static boolean[][] visited;
-    static int count;
+    static int count;//단지 수
 
     public static void func(int x, int y)
     {
@@ -43,7 +43,7 @@ class Main2667 {
             {
                 map[i][j] = str.charAt(j)-'0';
             }
-        }
+        }//입력
 
         ArrayList<Integer> al = new ArrayList<>();
         for(int i=0;i<N;i++)
@@ -53,12 +53,12 @@ class Main2667 {
                 if(map[i][j]==1 && visited[i][j]==false)
                 {
                     func(i,j);
-                    al.add(count);
+                    al.add(count);//단지 수 넣기
                     count=0;
                 }
             }
         }
-        Collections.sort(al);
+        Collections.sort(al);//오름차순 정렬
 
         StringBuilder sb = new StringBuilder();
         sb.append(al.size()+"\n");

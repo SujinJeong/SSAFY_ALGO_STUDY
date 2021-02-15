@@ -2,8 +2,8 @@ import java.util.*;
 import java.io.*;
 
 class My{
-    int x;
-    int count;
+    int x;//위치
+    int count;//칸 수
     public My(int x, int count)
     {
         this.x = x;
@@ -11,7 +11,7 @@ class My{
     }
 }
 
-class Main2178 {
+class Main2178 {//미로탐색
     static int N;
     static int M;
     static int answer;
@@ -26,7 +26,7 @@ class Main2178 {
         if(x==N-1 && y==M-1)
         {
             answer = cnt;
-            return;
+            return;//도착
         }
 
                 
@@ -67,10 +67,10 @@ class Main2178 {
             {
                 map[i][j] = str.charAt(j)-'0';
             }
-        }
+        }//입력
 
         q = new LinkedList<>();
-        q.add(new My(0,1));
+        q.add(new My(0,1));//시작위치 시작부터 한칸
 
         while(q.size()>0)
         {
