@@ -1,7 +1,8 @@
 import java.util.*;
 import java.io.*;
 
-class Main17610 {
+class Main17610 {//양팔저울
+    //시간초과...
     static Integer[] arr;
     static boolean[] barr;
     public static void func(int[] per, int[] cal, int N)
@@ -22,48 +23,48 @@ class Main17610 {
             System.out.println(sum);
     }
 
-    // public static void permi(int[] per, int index, int N, boolean[] visited)
-    // {//N개 순열
-    //     if(index==N)
-    //     {
-    //         System.out.println(Arrays.toString(per)+" ");
-    //         cal(per,N-1,0,new int[N-1]);
-    //         return;
-    //     }
-    //     for(int i=0;i<arr.length;i++)
-    //     {
-    //         if(visited[i]==false)
-    //         {
-    //             visited[i]=true;
-    //             per[index]=arr[i];
-    //             permi(per,index+1,N,visited);
-    //             visited[i]=false;
-    //         }
-            
-    //     }
-    // }
-
-    public static void combi(int[] com, int index, int a,int N)
+    public static void permi(int[] per, int index, int N, boolean[] visited)
     {//N개 순열
         if(index==N)
         {
-            System.out.println(Arrays.toString(com)+" ");
-            cal(com,N-1,0,new int[N-1]);
+            System.out.println(Arrays.toString(per)+" ");
+            cal(per,N-1,0,new int[N-1]);
             return;
         }
-        for(int i=a;i<arr.length;i++)
+        for(int i=0;i<arr.length;i++)
         {
-            com[index]=arr[i];
-            combi(com,index+1,i+1,N);
+            if(visited[i]==false)
+            {
+                visited[i]=true;
+                per[index]=arr[i];
+                permi(per,index+1,N,visited);
+                visited[i]=false;
+            }
+            
         }
     }
 
+    // public static void combi(int[] com, int index, int a,int N)
+    // {//N개 조합
+    //     if(index==N)
+    //     {
+    //         System.out.println(Arrays.toString(com)+" ");
+    //         cal(com,N-1,0,new int[N-1]);
+    //         return;
+    //     }
+    //     for(int i=a;i<arr.length;i++)
+    //     {
+    //         com[index]=arr[i];
+    //         combi(com,index+1,i+1,N);
+    //     }
+    // }
+
     public static void cal(int[] per, int N,int i,int[] arr)
-    {//N개조합
+    {//N개 연산 조합
         if(i==arr.length)
         {
             System.out.print(Arrays.toString(arr)+ ", ");
-            func(per,arr,N);
+            func(per,arr,N);//연산
             return;
         }
         for(int j=0;j<2;j++)
@@ -86,8 +87,6 @@ class Main17610 {
             sum+=arr[i];
         }
 
-        Arrays.sort(arr,Collections.reverseOrder());
-        
         barr = new boolean[sum+1];
         barr[0]=true;
         for(int i=0;i<N;i++)
@@ -95,7 +94,7 @@ class Main17610 {
         
         for(int i=2;i<=N;i++)
         {//i개의 추를 이용 
-            combi(new int[i],0,0,i);
+            permi(new int[i],0,i, new boolean[N]);
         }
 
         int cnt=0;
