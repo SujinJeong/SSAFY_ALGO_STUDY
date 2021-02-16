@@ -5,7 +5,7 @@ import java.io.InputStreamReader;
 import java.util.LinkedList;
 import java.util.StringTokenizer;
 
-public class back_3584 {
+public class back_3584_1 {
 	static int N, find1, find2;
 	static LinkedList<Integer>[] list;
 	static StringBuilder sb = new StringBuilder();
@@ -40,22 +40,28 @@ public class back_3584 {
 	
 	}
 	private static void dfs() {
-		int deeper = cnt_node(find1) >= cnt_node(find2) ? find1 : find2;
-		int deep = cnt_node(find1) < cnt_node(find2) ? find1 : find2;
+		int c1 = cnt_node(find1);
+		int c2 = cnt_node(find2);
 		
-		if (cnt_node(find1) != cnt_node(find2)) {
-			
-			for (int i = 0; i <= cnt_node(deeper) - cnt_node(deep); i++) {
-				deeper = list[deeper].get(0);
+		if (c1 != c2) {
+			if(c1>c2) {
+			for (int i = 0; i < (c1-c2); i++) {
+				find1 = list[find1].get(0);
 			}
+			}
+			if(c1<c2) {
+				for (int i = 0; i < c2-c1; i++) {
+					find2 = list[find2].get(0);
+				}
+				}
 		}
-            while (deeper != deep && list[deeper].size()!=0 && list[deeper].size()!=0 ) {
-				deeper = list[deeper].get(0);
-				deep = list[deep].get(0);
-			}
-			sb.append(deeper+"\n");
 		
-		
+		while (find1 != find2) {
+			find1 = list[find1].get(0);
+			find2 = list[find2].get(0);
+		}
+		sb.append(find1 + "\n");
+
 	}
 	
 	private static int cnt_node(int node) {
