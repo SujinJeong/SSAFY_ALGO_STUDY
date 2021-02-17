@@ -7,8 +7,8 @@ import java.util.ArrayList;
 
 /*
 2번의 dfs
-1. 루트기준으로 dfs 수행 -> 가장 큰 wight 가진 노드 구하기
-2. 가장 큰 weight 가진 노드를 구한 것 기준으로 다시 dfs
+1. 루트기준으로 dfs 수행 -> 루트에서 가장 거리가 먼, 가장 큰 weight 가진 노드 구하기
+2. 가장 큰 weight 가진 노드를 구한 것 기준으로 다시 dfs를 돌리면 가장 긴 트리의 지름을 구할 수 있음
  */
 public class Q1967 {
 

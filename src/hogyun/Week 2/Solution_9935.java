@@ -1,4 +1,4 @@
-package string;
+package hogyun.Week2;
 
 import java.io.BufferedReader;
 import java.io.IOException;
