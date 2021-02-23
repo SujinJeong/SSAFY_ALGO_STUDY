@@ -18,24 +18,24 @@ class Main5904 {//moo게임
     }
     
     public static void func2(int k,int n)
-    {
+    {//n은 인덱스
         if(k==0)
         {
             if(n==0)
-            {
+            {//맨 앞만 m이다
                 answer="m";
             }
             return;
         }
 
         if(n<map[k-1])
-        {
+        {//s(k-1)
             func2(k-1,n);
         }
         else if(n>=map[k-1] && n<map[k-1]+k+3)
-        {//moooo구간
+        {//moooo구간 m과 k+2
             if(n==map[k-1])
-            {
+            {//맨앞만 m이다
                 answer="m";
                 return;
             }
@@ -43,7 +43,7 @@ class Main5904 {//moo게임
                 return;
         }
         else
-        {
+        {//s(k-1)
             func2(k-1,n-(map[k-1]+k+3));
         }
 
@@ -62,10 +62,19 @@ class Main5904 {//moo게임
 
         map = new int[28];
         map[0]=3;
-        S(27);
+        S(27);//S(27)까지 map에 저장한다
+
+        //s(k) = 2*s(k-1) + k+3
+        //   s(1)   m과 k+2  s(1)
+        //moomooomoo moooo moomooomoo
+        //인덱스가
+        //0 ~ s(k-1)-1   s(k-1)구간
+        //s(k-1) ~ s(k-1)+k+2이 m과 k+2 구간
+        //s(k-1)+k+3 ~  s(k-1)구간
+        //s(0)이 될때까지 재귀 -> 인덱스 위치로 m o 구분
 
         for(int k=0;k<28;k++)
-        {//S(27)까지
+        {
             // System.out.println(k+" "+map[k]);
             if(N==map[k])
             {
