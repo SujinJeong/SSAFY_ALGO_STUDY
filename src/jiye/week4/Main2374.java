@@ -17,8 +17,29 @@ class Main2374 {//같은 수로 만들기
             map[i]=Integer.parseInt(br.readLine());
             al.add(i);
             if(MAX<map[i])
-                MAX=map[i];//가장 큰 수의 인덱스 같은거 여러개면? 앞에꺼
+                MAX=map[i];//가장 큰 수
         }
+
+
+        //큰수 인접배열 기준으로 앞 뒤 나눠서 반복한다
+
+        // i    0 1 2 3 4 5 6
+        //map   1 1 3 3 3 1 2
+        //가장 큰수 3 범위 0~6  -> func(0,6,3)
+        //
+        //큰 수 max=3 큰수 maxindex 2
+        //인접한 같은 수 k개 k=3 그룹  maxindex ~ maxindex+2
+        //인접한 같은 수 그룹 앞 뒤로 나눔
+        //앞 start ~ maxindex-1 |  maxindex ~ maxindex+k-1  | 뒤 maxindex+k ~ end
+        //
+        //func(0,1,3)                   func(5,6,3)
+        //max=1 maxindex=0 k=2          max=2 maxindex=6 k=1
+        //앞 func(0,-1,1) -> X          앞 func(5,5,2) ->가능    
+        //뒤 func(2,1,1)  -> X          뒤 func(7,6,2) -> X
+        //
+        //모두 같은 수라는 뜻 
+        //-> 이전 max까지 키운다
+        //11 -> 33   cnt+2
 
 
         func(0,N-1,MAX);
@@ -34,10 +55,10 @@ class Main2374 {//같은 수로 만들기
         //제일큰거 찾기
         for (int i = start; i <= end; i++)
         {
-            if(map[i]>max)
+            if (map[i] > max)
             {
                 max = map[i];
-                maxindex = i;
+                maxindex = i;//큰수가 여러개여도 맨 앞 인덱스만
             }
         }
 
@@ -64,7 +85,6 @@ class Main2374 {//같은 수로 만들기
         for(int i=start; i<=end;i++)
         {
             map[i]=prev_max;
-
         }
     }
 }

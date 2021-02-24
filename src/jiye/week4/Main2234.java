@@ -56,23 +56,13 @@ class Main2234 {//성곽
             }
         }
 
-        
-        // for (int i=0; i<n; i++) {
-        //     for (int j=0; j<m; j++) {
-        //         String str = Integer.toBinaryString(15 ^ map[i][j]);
-        //         System.out.print(str+" ");
-                
-        //         for(int s=str.length()-1;s>=0;s--)
-        //         {
-        //             if(str.charAt(s)=='1')
-        //             {
-        //                 System.out.print((int)Math.pow(2,str.length()-1-s)+" ");
-        //             }
-                    
-        //         }
-        //     }
-        //     System.out.println();
-        // }
+
+        //정수로 입력받고 2진수로 바꾼다 11-> 1011
+        //벽없는쪽을 찾으려고 1111 ^ 1011 ->   100  ->  4에 벽 없음
+        //그리고 dfs
+        //answer3은 벽있는쪽 1011 ->  1,2,8에 벽 있음
+        //테두리를 벗어나지 않는 벽 부시고
+        //원래 방 크기 + 부셔서 갈수있는 방 크기
 
         int answer1=0;
         for(int i=0;i<n;i++)
@@ -119,8 +109,8 @@ class Main2234 {//성곽
             }
         }
 
-           System.out.println(answer1);
-       System.out.println(max2);
-       System.out.println(max3);
+        System.out.println(answer1);
+        System.out.println(max2);
+        System.out.println(max3);
     }
 }
