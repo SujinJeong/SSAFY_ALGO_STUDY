@@ -22,7 +22,7 @@ class Main17073 {//나무위의 빗물
             int b =Integer.parseInt(st.nextToken());
             al.get(a).add(b);
             al.get(b).add(a);
-        }
+        }//아 걍 개수만 세도 된다고
 
         // Pi가 0보다 큰 정점들에 대해서 Pi들의 평균이라서
         //20/5가 아니라 20/3
