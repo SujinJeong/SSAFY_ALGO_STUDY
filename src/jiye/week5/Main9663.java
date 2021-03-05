@@ -79,7 +79,8 @@ class Main9663 {//N-Queen
             map[x][n]=1;//퀸을 둔다
 
             func(x+1);
-        }
+        }//아예이포문을 돌릴필요가 없다고? 함수 안에서만?
+        //아 맵을 그릴 필요가 없었따
         
         System.out.println(cnt);
     }
