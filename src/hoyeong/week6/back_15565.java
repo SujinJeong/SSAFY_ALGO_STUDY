@@ -30,10 +30,24 @@ public class back_15565 {
 			System.exit(0);
 		}
 
-		for(int i=0; i<=list.size()-K; i++) {
+		/*for(int i=0; i<=list.size()-K; i++) {
 			min = Math.min(min, list.get(i+K-1)-list.get(i)+1);
-		}
+		}*/
 		
+		int cnt=2, start=0, end=1;
+		while(true) {
+			if(cnt<K) {
+				end++;
+				cnt++;
+				if(cnt==K) {
+					min = Math.min(min, list.get(end)-list.get(start)+1);
+					start++;
+					cnt--;
+				}
+			}
+			if(end==list.size()-1) break;
+			
+		}
 		System.out.println(min);
 		
 	}
