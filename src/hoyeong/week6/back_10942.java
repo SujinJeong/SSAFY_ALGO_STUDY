@@ -36,7 +36,6 @@ public class back_10942 {
 		}
 		System.out.println(sb.toString());
 		
-		
 	}
 	private static void pelin() {
 		for(int i=1; i<=N; i++) { // 길이가 1일때  무조건 펠린
