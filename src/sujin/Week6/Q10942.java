@@ -21,6 +21,7 @@ public class Q10942 {
 		// 마지막
 		// if (arr[n] == arr[n+1]) dp[n][n+1] = true;
 
+		// 길이가 3이상일때 -> 초기값 1+2
 		for (int i = 2; i < n; i++) { // 탐색 범위
 			// j는 탐색 시작위치
 			for (int start = 1; start <= n - i; start++) {
