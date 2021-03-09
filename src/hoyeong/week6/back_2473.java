@@ -33,12 +33,12 @@ public class back_2473 {
 	}
 	
 	private static void pointer() {
-		for(int i=0; i<N-2; i++) {
+		for(int i=0; i<N-2; i++) { // i번째 숫자, i+1번째 숫자, N-1번째 숫자의 합
 			
 			int j=i+1;
 			int k=N-1;
 			
-			while(j!=k) {
+			while(j!=k) { // 투포인터
 				long result = arr[i]+arr[j]+arr[k]; 
 				
 				if(min>Math.abs(result)) {

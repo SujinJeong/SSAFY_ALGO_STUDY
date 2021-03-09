@@ -34,7 +34,6 @@ public class back_2002 {
 				}
 			}
 		}
-		
 		System.out.println(cnt);
 	}
 

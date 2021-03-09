@@ -65,7 +65,7 @@ public class back_7453 {
 			else {
 				long cnt1=0, cnt2=0; // cnt의 갯수가 int 값을 벗어날 수 있으므로 long
 				long ab=AB[idx1], cd=CD[idx2];
-				while(idx1<AB.length && AB[idx1]==ab) {
+				while(idx1<AB.length && AB[idx1]==ab) { // 합이 중복일 경우 중복 값들의 갯수 카운팅
 					idx1++;
 					cnt1++;
 				}
