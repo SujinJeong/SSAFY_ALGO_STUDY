@@ -46,8 +46,8 @@ public class back_10942 {
 		}
 		for(int i=3; i<=N; i++) { // 길이가 3 이상일 때 양 끝의 숫자가 같고, 사이에 수들이 펠린이면
 			for(int j=1; j<=N-i+1; j++) {
-				int k= j+i-1; // 길이가 i 일 때 마지막 숫자
-				if(arr[j]==arr[k] && dp[j+1][k-1]==1)
+				int k= j+i-1; // 길이가 i 일 때 마지막 숫자 k
+				if(arr[j]==arr[k] && dp[j+1][k-1]==1) // dp[j+1][k-1]은 양쪽의 값을 제외한 숫자가 펠린인지 확인
 					dp[j][k] = 1;
 			}
 		}
