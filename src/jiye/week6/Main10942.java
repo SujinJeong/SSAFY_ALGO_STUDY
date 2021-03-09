@@ -32,8 +32,8 @@ class Main10942 {//팰린드롬
                 
                 if(map[s]==map[e])
                 {//같으면 다음칸본다
-                    s++;
-                    e--;
+                    s++;//s는 뒤로
+                    e--;//e는 뒤로
                 }
                 else
                 {//팰린드롬 아니다
@@ -46,7 +46,7 @@ class Main10942 {//팰린드롬
                 sb.append("1\n");
             else
                 sb.append("0\n");
-        }
+        }//DP로 고쳐보기
         System.out.print(sb);
     }
 }
