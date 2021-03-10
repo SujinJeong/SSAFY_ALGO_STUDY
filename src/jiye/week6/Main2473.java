@@ -18,7 +18,7 @@ class Main2473 {//세용액
             {
                 break;
             }
-            sum = map[s]+map[e];
+            sum = map[s]+map[e];//두개합
 
             if(Math.abs(answerSum) > Math.abs(sum+map[index]))
             {//합이 더 작은것으로 갱신
@@ -63,6 +63,10 @@ class Main2473 {//세용액
         Arrays.sort(map);
 
         //map[i] 기준으로 sum이 가장작은 두 수를 찾는다
+        // 0 1 2 3 4 5 6 7 
+        // i s           e
+        //   i s         e
+        
         for(int i=0;i<N;i++)
             func(i);
 

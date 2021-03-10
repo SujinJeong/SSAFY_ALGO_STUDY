@@ -37,7 +37,7 @@ class Main1806 {//부분합
 
             if(sum>=S)
             {
-                num=e-s;
+                num=e-s;//길이
                 if(min>num)
                     min=num;
             }
@@ -45,7 +45,7 @@ class Main1806 {//부분합
         }
 
         if(min==Integer.MAX_VALUE)
-            System.out.println(0);
+            System.out.println(0);//합을 만드는 것이 불가능한 경우
         else
             System.out.println(min);
     }

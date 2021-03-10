@@ -37,7 +37,7 @@ public class back_9252 {
 			}
 		}
 		System.out.println(dp[arr1.length-1][arr2.length-1]);
-		str();
+		str(); // 문자열 찾는 메소드
 	}
 	private static void str() {
 		int r = arr1.length-1;
