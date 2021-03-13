@@ -30,7 +30,6 @@ public class Q10942 {
 				// 맨 앞과 맨뒤가 같고, 그 사이 값들이 모두 팰린드롬 true
 				if (arr[start] == arr[last] && dp[start + 1][last - 1])
 					dp[start][last] = true;
-				else dp[start][last] = false;
 			}
 		}
 	}
