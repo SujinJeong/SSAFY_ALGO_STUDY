@@ -45,5 +45,4 @@ public class Q2195 {
 			s += (e-s)-1;
 		}
 	}
-
 }
