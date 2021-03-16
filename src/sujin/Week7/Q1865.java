@@ -25,6 +25,7 @@ public class Q1865 {
 
 	}
 
+	// 1부터 시작하면 inf인지 검사를 안해야하는 이유 https://steady-coding.tistory.com/91
 	public static boolean bellmanFord() {
 		// 시작점 1번 노드로
 		dist[1] = 0;
@@ -34,9 +35,11 @@ public class Q1865 {
 		for (int v = 1; v < n; v++) {
 			update = false;
 			
+			// 모든 정점에서 출발할때는 node.length까지 반복해서 출발점으로 돌아왔을때 또 갱신이 일어나면 음의사이클이라는것
 			for (int i = 0; i < node.length; i++) {
 				Node n = node[i];
 
+				// 모든 정점 검사할 경우 dist[n.start] != INF 추가
 				// 출발점이 infinite 값이 아니고 dp값보다 현재 계산값이 더 작을 때 더 작은 최단거리 갱신
 				if (dist[n.end] > dist[n.start] + n.time) {
 					dist[n.end] = dist[n.start] + n.time;
@@ -45,6 +48,7 @@ public class Q1865 {
 				}
 			}
 			
+			// 간선에 대한 모든 정보를 조사했는데 더이상 최단거리 갱신이 이루어지지 않는다면 음수사이클 X
 			if (!update)
 				return false;
 		}
