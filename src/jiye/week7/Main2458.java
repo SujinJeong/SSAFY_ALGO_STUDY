@@ -1,7 +1,8 @@
 import java.util.*;
 import java.io.*;
 class Main2458 {//키순서
-
+    //bfs도 가능하다
+    //boolean[][] 으로도 할수있다...
     public static void main(String[] args) throws Exception{
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
         StringTokenizer st = new StringTokenizer(br.readLine());

@@ -62,7 +62,7 @@ class Main1865{//웜홀
                     int e=road[i].e;
                     int tt=road[i].tt;
 
-                    if(map[s]!=Integer.MAX_VALUE && map[e] > map[s]+tt)
+                    if(map[e] > map[s]+tt)
                     {//!=MAX_VALUE를 하면 음 단절된거 뒤에 사이클은 못본다
                         map[e] = map[s]+tt;//작은 값으로 갱신
                     }
@@ -78,7 +78,7 @@ class Main1865{//웜홀
                 int e=road[i].e;
                 int tt=road[i].tt;
 
-                if(map[s]!=Integer.MAX_VALUE && map[e]>map[s]+tt)
+                if(map[e]>map[s]+tt)
                 {
                     b=true;//음의 사이클
                     break;

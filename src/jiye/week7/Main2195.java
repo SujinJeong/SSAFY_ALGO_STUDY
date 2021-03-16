@@ -36,14 +36,16 @@ class Main2195 {//문자열 복사
         str2=br.readLine();
 
 
-        //aaabbbabbbaaa
-        //0 2  5 7 9 12
+        //str1  abaabba
+        //  
+        //str2  aaabbbabbbaaa
+        //      0 2  5 7 9 12
 
         int index=0;
-        int answer=0;
+        int answer=0;//개수
         while(index<str2.length())
         {
-            //str2[i]를 찾는다
+            //str1에서 str2[index]를 찾는다
             //그 뒤가 같으면 계속 본다 
             // System.out.println(index);
             index += find(index);//그 다음 볼 인덱스

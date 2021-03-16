@@ -66,6 +66,7 @@ class Main11779 {//최소비용 구하기 2
             // System.out.println(next);
             visited[next]=true;
             cnt++;
+
             //그럼 또 다음도시로 가서 각 도시로 돌아가는 금액 갱신
             //S->next->...
             for(int i=0;i<N;i++)
@@ -73,8 +74,8 @@ class Main11779 {//최소비용 구하기 2
                 if(map[next][i]!=987654321)
                 {//못가는 경우가 아니라면
                     int temp = arr[next] + map[next][i];//S->next + next->i
-                    if(arr[i]>temp)
-                    {
+                    if(arr[i] > temp)
+                    {//값이 갱신 되는 경우
                         arr[i] = temp;//S->i vs next 거쳐가는 값
                         answer[i] = next;//next도시를 거쳐서 i값이 갱신되었다
                     }
@@ -88,7 +89,7 @@ class Main11779 {//최소비용 구하기 2
         al[j]=e+1;
 
         while(answer[e]!=-1)
-        {//갱신된 적이 없을때까지
+        {//갱신된 적이 없을때까지 ->시작도시에서 바로 간게 최소비용
             e = answer[e];//거쳐온 도시 8->3->2->1
             j++;
             al[j]=(e+1);
