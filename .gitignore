@@ -92,12 +92,15 @@ local.properties
 # virtual machine crash logs, see http://www.java.com/en/download/help/error_hotspot.xml
 hs_err_pid*
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 # End of https://www.toptal.com/developers/gitignore/api/java,eclipse
 src/jiye/week6/.vscode/launch.json
 src/jiye/week1/.vscode/launch.json
 src/jiye/week2/.vscode/launch.json
 =======
+=======
+>>>>>>> 402dbdf3d86dff115f21e35ff929a1a1e4645369
 # Intellij
 .idea/
 *.iml
@@ -114,5 +117,9 @@ target/
 
 #Project exclude paths
 /out/
+<<<<<<< HEAD
+# End of https://www.toptal.com/developers/gitignore/api/java,eclipse
+>>>>>>> 402dbdf3d86dff115f21e35ff929a1a1e4645369
+=======
 # End of https://www.toptal.com/developers/gitignore/api/java,eclipse
 >>>>>>> 402dbdf3d86dff115f21e35ff929a1a1e4645369
