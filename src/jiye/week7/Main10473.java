@@ -49,7 +49,7 @@ class Main10473 {//인간 대포
 
         map = new double[N+2][N+2];//걸린 시간 저장
         for(int i=0;i<N+2;i++)
-        {//대포들
+        {//시작점에서 그냥 걸어가는 데 걸린 시간
             double x2 = (arr[0][0]-arr[i][0])*(arr[0][0]-arr[i][0]);
             double y2 = (arr[0][1]-arr[i][1])*(arr[0][1]-arr[i][1]);
             map[0][i] = Math.sqrt(x2+y2)/5.0;//시작점에서 대포까지의 거리 / 속도
@@ -68,7 +68,6 @@ class Main10473 {//인간 대포
                 double x2 = (arr[j][0]-arr[i][0])*(arr[j][0]-arr[i][0]);
                 double y2 = (arr[j][1]-arr[i][1])*(arr[j][1]-arr[i][1]);
                 double dist = Math.sqrt(x2+y2);//대포와 대포 사이 거리\
-                // System.out.println(i+" "+j+" "+arr[i][0]+" "+arr[j][0]+" "+x2+" "+y2+"   "+dist);
                 double d = 0;
                 if(dist<50)
                 {
@@ -98,14 +97,14 @@ class Main10473 {//인간 대포
 
         for(int n=0;n<=N;n++)
         {//N+1번 수행
-            int next = find();
+            int next = find();//방문 안한 곳 중에 작은 값 인덱스
             visited[next]=true;
 
             for(int i=1;i<N+2;i++)
             {
                 double temp = answer[next] + map[next][i];//next거쳐서 도착한것
                 if(answer[i] > temp)
-                    answer[i] = temp;
+                    answer[i] = temp;//더 작은값으로
             }
             // System.out.println(next+" "+Arrays.toString(answer));
         }
