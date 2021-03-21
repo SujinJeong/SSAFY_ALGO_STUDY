@@ -58,7 +58,7 @@ public class back_1939 {
 			q.add(Start);
 			visited[Start]=true;
 			
-			if(bfs(mid)) { // 가능
+			if(bfs(mid)) { // 목적지까지 갈 수 있다면
 				result = Math.max(result, mid);
 				low = mid+1;
 			}
