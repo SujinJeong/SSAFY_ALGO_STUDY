@@ -25,8 +25,8 @@ public class back_2917 {
 	static boolean [][] visited;
 	final static int [] dr ={0,0,-1,1};
 	final static int [] dc ={-1,1,0,0};
-	static Queue<b_2917> q = new LinkedList<b_2917>();
-	static Queue<b_2917> tree = new LinkedList<b_2917>();
+	static Queue<b_2917> q = new LinkedList<b_2917>(); // bfs에서 쓸 queue
+	static Queue<b_2917> tree = new LinkedList<b_2917>(); // 트리 저장 queue
 	public static void main(String[] args) throws IOException {
 		// TODO Auto-generated method stub
 		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
