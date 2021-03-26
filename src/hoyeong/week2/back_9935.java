@@ -1,105 +1,103 @@
 package hoyeong.week2;
+
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStreamReader;
+import java.util.Stack;
+
+public class back_9935 {
+	static int N,B;
+	static String str,bomb;
+	static char [] result;
+	static Stack<Integer>stack = new Stack<>();
+	public static void main(String[] args) throws IOException {
+		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+		StringBuilder sb = new StringBuilder();
+		str = br.readLine();
+		bomb = br.readLine();
+				
+		N = str.length();
+		B = bomb.length();
+		
+		result = new char[N];
+		
+		int idx = 0;
+		outloop:for(int i=0; i<N; i++) {
+			result[idx++] = str.charAt(i);
+			if(result[idx-1] == bomb.charAt(B-1)) { // 폭발물 추정
+				if(idx - B < 0) continue;
+				for(int j=0; j<B; j++) {
+					if(result[idx-j-1]!=bomb.charAt(B-j-1)) {
+						continue outloop;
+					}
+				}
+				idx -= B;
+			}
+		}
+		
+		if(idx==0) System.out.println("FRULA");
+		else {
+		for(int i=0; i<idx; i++)
+			sb.append(result[i]);
+		System.out.println(sb);
+		}
+	}
+}
+
+
+
+
+// 예전 코드--------------------------------------------------------
 /*package week2;
 
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
-import java.util.ArrayDeque;
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.Deque;
-import java.util.LinkedList;
-import java.util.List;
-import java.util.Queue;
+import java.util.Stack;
 
 public class back_9935 {
 	
 	static BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
 	static StringBuilder sb = new StringBuilder();
-	static Queue<String> q1 = new LinkedList<>();
-	static Queue<String> q2 = new LinkedList<>();
+	static Stack <String> stack = new Stack<>();
 	static String [] strArray;
 	static String [] bomb; 
 	static String[] save;
 	
 	public static void main(String[] args) throws IOException {
-//		List <String> list = new ArrayList<>();
 		String str = br.readLine();
 		strArray = str.split("");
 		
 		String str1 = br.readLine();
 		bomb = str1.split("");
 		save = new String[bomb.length];
-				
 		
-		if(d.size()!=0) {
-			for(String s:q1) sb.append(s);
+		bomb();
+		
+		if(!stack.isEmpty()) {
+			System.out.println(sb.toString());
 		}
 		else System.out.println("FRULA");
-		if(sb!=null)System.out.println(sb.toString());
 	}
 	
-	private static void bomb(){
-		int cnt=0;
-		for(int i=0; i<q1.size(); i++) {
-			if(q2.size()==bomb.length) {q2.clear(); cnt++;}
-			
-			if(q1.peek().equals(bomb[q2.size()])) {
-				q2.add(q1.poll());
-				continue;
-			}
-			
-			if(!q2.isEmpty()){
-				while(!q2.isEmpty())
-					q1.add(q2.poll());
-				i--;
-				continue;
-			}
-			
-			q1.add(strArray[i]);
-		}
-		
-		
-		
-		int cnt=0;
-		if(d.peek().equals(strArray[0]) && cnt>=strArray.length)
-			
-		if(d.peek().equals(bomb[0])) {
-			
-			if(!Arrays.equals(bomb, save)) {
-				for(int i=bomb.length-1; i>0; i--) {
-					d.addFirst(save[i]);
+	private static void bomb() {
+		for(int i=0; i<strArray.length; i++) {
+			if(strArray[i].equals(bomb[bomb.length-1])) {
+				save[bomb.length-1]=strArray[i]; // 폭발 문자열의 가장 마지막 값 비교
+				int cnt=1;
+				for(int j=bomb.length-2; j>=0; j--) { // 
+					if(i < bomb.length || !stack.peek().equals(bomb[j])) break; // 폭발 문자가 아니라면 중간에 끊음
+					save[j]=stack.pop();
+					cnt++;
+					}
+				if(cnt!=bomb.length) {
+					for(int j=bomb.length-cnt; j<=bomb.length-1; j++) {
+						stack.push(save[j]);
+						}
 				}
-				d.addLast(save[0]);
 			}
-			else cnt=0;
-		}
-		else {
-			d.add(d.poll());
-			cnt++;
-		}
-	}
-
-}
-
-int compare=0;
-while(true) {
-	int compare1=compare;
-for(int i=0; i<list.size(); i++) {
-	if(list.get(i).equals(bomb[0])) {
-		int cnt=0;
-		for(int j=i; j<i+bomb.length; j++) {
-			save[cnt++] = list.get(j);
-		}
-		if(Arrays.equals(bomb, save)) {
-			for(int j=i; j<i+bomb.length;j++) {
-				list.remove(i);
+			else stack.push(strArray[i]);
 			}
-			compare1++;
+		for(String s:stack) sb.append(s);
 		}
-	}
-}
-if(compare!=compare1) continue;
-else break;
-}		
-*/
+	}*/
