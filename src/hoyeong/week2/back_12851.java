@@ -25,7 +25,6 @@ public class back_12851 {
             System.out.println((N-K) + "\n1");
             return;
         }
-		
 		q.add(N);
 		time[N] = 0;
 		
