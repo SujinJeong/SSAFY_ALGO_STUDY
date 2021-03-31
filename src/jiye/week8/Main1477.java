@@ -24,23 +24,13 @@ class Main1477{//휴게소 세우기
 
         int[] arr = new int[N+2];
         st = new StringTokenizer(br.readLine());
-        for(int i=0;i<N;i++)
+        for(int i=0;i<N;i++)//휴게소 N개
             arr[i] = Integer.parseInt(st.nextToken());
 
         arr[N]=0;//시작부분
         arr[N+1]=L;//끝부분
 
         Arrays.sort(arr);//정렬한다
-
-        /*for(int i=0;i<M;i++)
-        {//M번
-            int a = pq.poll();
-            int b=a/2;//반
-            pq.add(b);
-            pq.add(a-b);
-        }
-        //아 이미 있는곳은 안되는데
-        */
 
         int[] map = new int[N+1];
         for(int i=0;i<N+1;i++)

@@ -3,7 +3,6 @@ import java.io.*;
 class Main8983 {//사냥꾼
     static int L;
     static int M;
-    static int look_x;
     static int[] arr;//사대
     
     public static void main(String[] args) throws Exception{
@@ -18,10 +17,8 @@ class Main8983 {//사냥꾼
         st = new StringTokenizer(br.readLine());
         for(int i=0;i<M;i++)
             arr[i] = Integer.parseInt(st.nextToken());
-        Arrays.sort(arr);
+        Arrays.sort(arr);//사대 위치 정렬
 
-        look_x = arr[M-1]+L;//동물의 x좌표 이만큼만 보면 됨
-      
         int[][] animal = new int[N][2];
 
         for(int i=0;i<N;i++)
@@ -32,7 +29,6 @@ class Main8983 {//사냥꾼
 
             animal[i][0] = a;
             animal[i][1] = b;
-                // animal[a][b] =1;
         }
 
         int answer =0;
@@ -52,7 +48,7 @@ class Main8983 {//사냥꾼
         for(int i=0;i<N;i++)
         {
             if(bsearch(animal[i][0],animal[i][1])==true)
-                answer++;
+                answer++;//잡은 동물 수
         }
 
         System.out.println(answer);
@@ -61,16 +57,17 @@ class Main8983 {//사냥꾼
     public static boolean bsearch(int x, int y)
     {
         int low = 0;
-        int high = M-1;
+        int high = M-1;//사대 인덱스
 
-        // x - (L-y) ~~ x + (L-y)
+        // 동물을 쏠 수 있는 사대위치 찾기
+        // x - (L-y)  ~ x ~  x + (L-y)
         int mid=0;
         while(low<=high)
         {
             mid = (low+high+1)/2;
 
             if(arr[mid] < x -(L-y))
-            {//작으면
+            {//사대 위치가 작으면
                 low = mid +1;
             }
             else if(arr[mid] > x + (L-y))

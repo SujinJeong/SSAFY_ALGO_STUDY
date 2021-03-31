@@ -92,6 +92,16 @@ class Main2917 {//늑대 사냥꾼
             }
         }// bfs로 나무와 떨어진 최소 거리 map을 채운다
 
+        /*
+        6 5 4 5 6         .....
+        5 4 3 4 5         .....
+        4 3 2 3 4         .....
+        3 2 1 2 3         .....
+        2 1 0 1 2         V.+.J
+        */
+
+        //다익스트라로 나무와 떨어진 거리가 최대가 되도록
+        //arr에 이동한 경로의 나무와 떨어진 거리 중에 최소값  의 최대값을 채운다
         PriorityQueue<Wolf> pq = new PriorityQueue<>(new Comparator<Wolf>(){
             public int compare(Wolf w1, Wolf w2)
             {
@@ -109,7 +119,7 @@ class Main2917 {//늑대 사냥꾼
                 pq.add(new Wolf(i,j,-987654321));
             }
         }
-        arr[start_x][start_y] = map[start_x][start_y];//시작
+        arr[start_x][start_y] = map[start_x][start_y];//시작점
         pq.add(new Wolf(start_x,start_y,map[start_x][start_y]));
 
         visited = new boolean[N][M];
@@ -138,8 +148,9 @@ class Main2917 {//늑대 사냥꾼
                     continue;
                 //갈수있는 점에서
                 
-                int temp = Math.min(d, map[nx][ny]);//가는길의 최소값
                 //start->(x,y) vs  x,y->nx,ny
+                int temp = Math.min(d, map[nx][ny]);//가는길의 최소값
+
                 // System.out.println(x+","+y+" -> "+nx+","+ny+" : "+map[nx][ny]+" vs "+d+" = "+temp +" --- "+arr[nx][ny]);
                 if(arr[nx][ny] < temp)
                 {//start->nx,ny vs 가는길의 최소값  중에 최대값 -> 크면 갱신

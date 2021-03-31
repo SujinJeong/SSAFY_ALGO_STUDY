@@ -24,8 +24,8 @@ class Main16900 {//이름 정하기
 
         //ababcaba 3
         //[0, 0, 1, 2, 0, 1, 2, 3]
-        //(K-1) * (8-3) + 8
-        //ababc ababc ababcaba
+        //   8   +   (K-1) * (8-3)
+        //ababc aba  bcaba  bcaba
 
         long answer = (long)(N-pi[N-1])*(K-1) + N;//long으로 해야한다....
         System.out.println(answer);

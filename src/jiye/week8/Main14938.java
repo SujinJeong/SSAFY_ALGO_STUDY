@@ -45,7 +45,7 @@ class Main14938 {//서강그라운드
 
         int max=0;
         for(int n=0;n<N;n++)
-        {
+        {//출발점 바꿔가면서 다익스트라
             PriorityQueue<Field> pq = new PriorityQueue<>(new Comparator<Field>(){
 
                 @Override
@@ -109,7 +109,7 @@ class Main14938 {//서강그라운드
             // System.out.println(n+" "+Arrays.toString(dist)+"  "+count);
             
             if(count>max)
-                max = count;
+                max = count;//최대 아이템 개수
         }
         System.out.println(max);
     }

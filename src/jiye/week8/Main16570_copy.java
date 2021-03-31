@@ -31,9 +31,12 @@ class Main16570_copy{//앞뒤가 맞는 수열
         // System.out.println(Arrays.toString(pi));
 
         //뒤에서부터 pi구한다음에 
-        //제일 큰 수 몇개 나오는지 구하면 됨
-        // 2 5 3 2 5 2 4 3 2 5
-        // 0 1 3 2 1 0 0 0 0 0 뒤에서부터
+        //제일 큰 수 몇개 나오는지 구하면 됨  --앞부분만 자를 수 있으니깐
+        // 2 5 3 2 5 2 4 3 2 5   뒤에서부터  5 2 3 4 2 5 2 3 5 2
+        // 0 0 0 1 2 1 0 0 1 2
+        //   0 0 0 1 0 0 0 0 1
+        //     0 0 0 0 0 1 2 3
+        //                            pi[]  0 0 0 0 0 1 2 3 1 0   제일 큰수 3 한개           
         // 2 5 2 5 2 5 2 8 2 5 2
         // 3 2 3 2 3 2 1 0 1 0 0 뒤에서부터
 
@@ -56,8 +59,8 @@ class Main16570_copy{//앞뒤가 맞는 수열
         }
 
         if(K!=0)
-        System.out.println(K+" "+count);
+            System.out.println(K+" "+count);
         else
-        System.out.println("-1");
+            System.out.println("-1");
     }
 }
