@@ -1,5 +1,5 @@
 import java.util.*;
-class Solution3_5 {
+class Solution3_5 {//n진수 게임
     public String solution(int n, int t, int m, int p) {
         String answer = "";
 

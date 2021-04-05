@@ -1,14 +1,14 @@
 import java.util.*;
-class Solution3_1 {
-    static int mm;
-    static int[] arr;
-    static int[] map;
-    static int[] target;
+class Solution3_1 {//방금그곡
+    static int[] arr;//임시배열
+    static int[] map;//곡
+    static int[] target;//들은 음악
     static int J;//들은 음악 길이
     static int time;//노래 재생 시간
 
     public String solution(String m, String[] musicinfos) {
-        String answer = "";
+        String answer = "(None)";
+        int max=0;
 
         int M = m.length();
         arr = new int[M];
@@ -46,12 +46,12 @@ class Solution3_1 {
             String title = st.nextToken();
 
             String melody = st.nextToken();
-            mm = melody.length();//패턴 길이..
+            int mm = melody.length();//패턴 길이..
             arr =  new int[mm];
-            int P = change(melody,mm);//패턴 숫자로
+            int P = change(melody,mm);//패턴 숫자로 arr에
 
             map = new int[time];//재생시간만큼 돈 음악... 
-            if(time<P)
+            if (time < P)
             {//재생시간까지 자르기
                 for(int i=0;i<time;i++)
                 {
@@ -70,13 +70,12 @@ class Solution3_1 {
                 }
                 for(int j=0;j<time-(tt*P);j++)
                     map[tt*P +j] = arr[j];
-
             }
-// System.out.println(Arrays.toString(map));
-            boolean b= false;
-            
+            // System.out.println(Arrays.toString(map));
+
+            boolean b= false;//맞는걸 찾았는지
             s=0;
-            for(int j=0;j<time;j++)
+            for(int j = 0; j < time; j++)
             {
                 while(s>0 && map[j] != target[s])
                 {
@@ -85,7 +84,7 @@ class Solution3_1 {
                 if(map[j]==target[s])
                 {
                     if(s==J-1)
-                    {
+                    {//찾았으면
                         b=true;
                         break;
                     }
@@ -93,10 +92,14 @@ class Solution3_1 {
                         s++;
                 }
             }
+
             if(b==true)
             {
-                answer=title;
-                break;
+                if(max < time)//재생시간이 긴 음악제목 반환
+                {
+                    answer=title;
+                    max = time;
+                }//break하면 다음꺼 못봄
             }
         }
             
@@ -167,6 +170,6 @@ class Solution3_1 {
         }
         // System.out.println(Arrays.toString(arr));
 
-        return J;
+        return J;//바꾸고난 배열 길이 반환
     }
 }

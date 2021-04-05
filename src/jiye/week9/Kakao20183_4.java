@@ -1,16 +1,16 @@
 import java.util.*;
-class Solution3_4 {
+class Solution3_4 {//파일명 정렬
     static class Text{
-        String str;
+        int index;//들어온 순서
+        String str;//원래 문자열
         String head;
         int num;
-        String tail;
-        public Text(String str, String head, int num, String tail)
+        public Text(int index, String str, String head, int num)
         {
+            this.index = index;
             this.str = str;
             this.head = head;
             this.num = num;
-            this.tail = tail;
         }
     }
     public String[] solution(String[] files) {
@@ -20,12 +20,9 @@ class Solution3_4 {
             {
                 if(t1.head.compareToIgnoreCase(t2.head)==0)
                 {//같으면
-                    // if(t1.num==t2.num)
-                    // {//숫자도 같으면
-                    //     return t1.tail.compareTo(t2.tail);
-                    // }
-                    // else
-                        return t1.num - t2.num;//숫자 작은 순
+                    if(t1.num==t2.num)
+                        return t1.index - t2.index;//먼저 들어온 순
+                    return t1.num - t2.num;//숫자 작은 순
                 }
                 else
                     return t1.head.compareToIgnoreCase(t2.head);//대소문자 구분없이 Head작은 순
@@ -36,14 +33,12 @@ class Solution3_4 {
         String[] answer = new String[N];
         
         for(int n=0;n<N;n++)
-        {
+        {//pq에 넣어준다
             String str = files[n];
-            String str2 = str;
             int M = files[n].length();
             String head = "";
             int number=0;
-            String tail="";
-            int index=0;
+            int index=0;//숫자부분 시작 인덱스
             for(int i=0;i<M;i++)
             {
                 int a = str.charAt(i)-'0';
@@ -68,26 +63,24 @@ class Solution3_4 {
                     break;
                 }
                 if(cnt==5)
-                    break;
+                    break;//5까지만
             }
             number = Integer.parseInt(str.substring(index,cnt+index));
 
-            tail = str.substring(cnt+index,M);//끝까지
-
-            System.out.println(head+" -- "+ number+" -- "+tail);
-            pq.add(new Text(str2,head, number, tail));
+            System.out.println(head+"|"+ number);
+            pq.add(new Text(n, str, head, number));
         }
         
         int i=0;
         while(pq.size()!=0)
-        {
+        {//순서대로 answer에 저장
             Text text = pq.poll();
             String str = text.str;
             answer[i] = str;
             i++;
         }
 
-        System.out.println(Arrays.toString(answer));
+        // System.out.println(Arrays.toString(answer));
         return answer;
     }
 }

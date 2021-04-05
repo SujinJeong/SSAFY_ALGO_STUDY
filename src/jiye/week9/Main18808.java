@@ -1,6 +1,6 @@
 import java.util.*;
 import java.io.*;
-class Main18808{
+class Main18808{//스티커 붙이기
     //08:19
     static int[] dx={-1,1};
     static int N;

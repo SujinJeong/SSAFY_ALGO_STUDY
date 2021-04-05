@@ -1,5 +1,5 @@
 import java.util.*;
-class Solution3_2 {
+class Solution3_2 {//압축
     
     public int[] solution(String msg) {
         ArrayList<Integer> ans = new ArrayList<>();

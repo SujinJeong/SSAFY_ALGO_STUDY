@@ -1,6 +1,6 @@
 import java.util.*;
 import java.io.*;
-class Main6087 {
+class Main6087 {//레이저 통신
     static class Mir{
         int x;
         int y;
