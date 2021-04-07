@@ -115,7 +115,6 @@ public class back_16236 {
 			start_c = save_c;
 			result += save;
 		}
-		
 		return check;
 	}
 }
