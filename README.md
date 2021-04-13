@@ -2,8 +2,8 @@
 
 <p align="center">
   <img src="./img/ssafy.png"><br/>
-  - 9반 1팀 (Begin 2021/01/25) -  
-  - 알고리즘 기본 개념 모두 복습 후 자율스터디 시작 (Begin 2021/04/07 ~)
+  - 서울 9반 1팀 <strong>그룹스터디</strong> 시작 (Begin 2021/01/25) -  
+  - 알고리즘 기본 개념 모두 복습 후 <strong>자율스터디</strong> 시작 (Begin 2021/04/07 ~)
 </p>
 
 
