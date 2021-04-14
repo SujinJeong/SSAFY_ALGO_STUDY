@@ -10,6 +10,7 @@ public class Q14600 {
 	 * (가로-y, x-1) 3. 위쪽이 비어있다면 -> 왼쪽, 오른쪽 확인 아래쪽이 비어있다면 -> 왼쪽, 오른쪽 확인
 	 */
 
+	// 참고사이트 : https://rebro.kr/64
 	static int[][] map;
 	static int idx = 0;
 
