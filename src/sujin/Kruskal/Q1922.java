@@ -39,8 +39,9 @@ public class Q1922 {
 
 		if (p1 < p2) { // 부모가 다를 떄 연결
 			parent[p2] = p1;
-		} else
+		} else {
 			parent[p1] = p2;
+		}
 	}
 
 	public static boolean findParent(int x, int y) {
