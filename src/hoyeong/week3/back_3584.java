@@ -5,7 +5,7 @@ import java.io.InputStreamReader;
 import java.util.LinkedList;
 import java.util.StringTokenizer;
 
-public class back_3584_1 {
+public class back_3584 {
 	static int N, find1, find2;
 	static LinkedList<Integer>[] list;
 	static StringBuilder sb = new StringBuilder();

@@ -5,7 +5,7 @@ import java.io.IOException;
 import java.io.InputStreamReader;
 import java.util.StringTokenizer;
 
-public class back_14503_1 {
+public class back_14503 {
 	static int N,M, start_N, start_M, start_dir, cnt=1;
 	static int[][] map;
 	static boolean[][] visited;

@@ -21,7 +21,7 @@ public class Q2 {
 	            if(dicMap.containsKey(str.substring(0,i))){
 	                String key = str.substring(0, i);
 	                String nextKey = str.length() > i+1 ? str.substring(i, i+1) : "";
-	                retList.add(dicMap.get(key));
+	                retList.add((String) dicMap.get(key));
 	                if(!nextKey.isEmpty() && !dicMap.containsKey(key+nextKey)) { 
 	                    dicMap.put(key+nextKey, String.valueOf(dicMap.size()+1));
 	                }
