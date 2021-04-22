@@ -8,12 +8,22 @@ import java.util.Queue;
 import java.util.StringTokenizer;
 
 public class back_2178 {
+	public static class Dot {
+		int c, r;
+
+		public Dot(int c, int r) {
+			super();
+			this.c = c;
+			this.r = r;
+		}
+	}
+	
 	static int N,M;
 	static int [][] map;
 	static boolean[][] visited;
 	final static int[] dr = {1,0,-1,0};
 	final static int[] dc = {0,1,0,-1};
-	static Queue<Dot> q = new LinkedList<>();
+	static Queue<Dot> q = new LinkedList<Dot>();
 	
 	public static void main(String[] args) throws IOException {
 		// TODO Auto-generated method stub
