@@ -70,6 +70,9 @@
 - Blog : 
 - E-mail : 
 
+[DongGil](https://github.com/donggillee-dev)
+- Blog :
+- E-mail :
 
 ## :snowflake: 진행순서
 1. 입력보고 시간복잡도 확인
